@@ -1,9 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export const TodoForm = () => {
+export const TodoForm = ({ onSubmit }) => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
 
   return (
     <div>

@@ -1,20 +1,15 @@
 import React from "react";
 import { TodoForm } from "../components/TodoForm";
-// import { createTodo } from "./api";
-// import { useHistory } from "react-router-dom";
+import { createTodo } from "../api";
+import { useHistory } from "react-router-dom";
 
 export const CreateTodo = () => {
-  //   const history = useHistory();
+  const history = useHistory();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // history.push("/");
+  const onSubmit = async (data) => {
+    await createTodo(data);
+    history.push("/");
   };
-
-  //   const onSubmit = async (data) => {
-  //     await createTodo(data);
-  //     history.push("/");
-  //   };
 
   return (
     <div className="container">

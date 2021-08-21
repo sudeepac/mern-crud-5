@@ -24,7 +24,6 @@ exports.get_todo = (req, res) => {
 //Create todo
 
 exports.create_todo = (req, res) => {
-  console.log(req.body);
   const todo = new Todo(req.body);
   todo
     .save()
