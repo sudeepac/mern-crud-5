@@ -29,7 +29,7 @@ export const ListTodo = () => {
           <tbody>
             {items.map((todo) => (
               <tr key={todo._id}>
-                <td>{todo.text}</td>
+                <td>{todo.title}</td>
                 <td>{todo.description}</td>
                 <td>{todo.status}</td>
                 <td>
